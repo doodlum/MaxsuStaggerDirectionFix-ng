@@ -10,8 +10,8 @@ namespace SDFix
 		if (Var_name.c_str() == StaggerDireName && staggerDire == 0.f) {
 			logger::debug("Reset stagger Direction Float Hook Trigger!");
 
-			if (Graph && Graph->unk218 && Graph->unk218->GetUserData()) {
-				auto target = Graph->unk218->GetUserData();
+			if (Graph && Graph->rootNode && Graph->rootNode->GetUserData()) {
+				auto target = Graph->rootNode->GetUserData();
 
 				float ModifiedDire;
 				if (target->GetGraphVariableFloat(ModifiedDireName, ModifiedDire))
