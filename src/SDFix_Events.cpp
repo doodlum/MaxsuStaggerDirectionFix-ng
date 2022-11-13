@@ -73,7 +73,7 @@ namespace SDFix
 
 		RE::BSTSmartPointer<RE::BSAnimationGraphManager> animationGraphManagerPtr;
 		if (hit_target->GetAnimationGraphManager(animationGraphManagerPtr)) {
-			RE::BShkbAnimationGraph* animationGraph = animationGraphManagerPtr->graphs[animationGraphManagerPtr->activeGraph].get();
+			RE::BShkbAnimationGraph* animationGraph = animationGraphManagerPtr->graphs[animationGraphManagerPtr->GetRuntimeData().activeGraph].get();
 
 			float out;
 			if (!animationGraph->GetGraphVariableFloat("staggerDirection", out)) {
